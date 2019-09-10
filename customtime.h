@@ -1,3 +1,5 @@
+#ifndef TIME_INCLUDED
+#define TIME_INCLUDED
 #include<time.h>
 char* gettime()
 {
@@ -7,4 +9,4 @@ char* gettime()
   ti = localtime(&tt); // get the current local time into ti
   return asctime(ti); // return in string form
 }
-  
+#endif
