@@ -17,7 +17,7 @@ public:
     int endSession()
     {
         isopen = 0;
-        etime = gettime(0);
+        etime = gettime();
         fstream logger("slog.txt", ios::in|ios::out|ios::app);
         logger<<stime<<" to "<<etime<<" username: "<<user<<" prof: "<<prof<<endl;
         logger.close();
@@ -31,9 +31,9 @@ Session nullSession("", -1);
 Session validateUser(char* user, char* pass, int prof)
 {
     fstream f;
-    if(prof = 1)
+    if(prof == 1)
     {   f.open("Customer.dat", ios::in|ios::out|ios::binary|ios::ate);}
-    if(prof = 2)
+    if(prof == 2)
     {   f.open("Manager.dat", ios::in|ios::out|ios::binary|ios::ate);}
     f.seekg(0, ios::beg);
     Customer c;
