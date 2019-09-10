@@ -1,3 +1,6 @@
+#ifndef MANAGER_INCLUDED
+#define MANAGER_INCLUDED
+
 #include<stdio.h>
 #include<fstream.h>
 
@@ -32,3 +35,4 @@ class manager {
     cout<<"Salary:"<<mngr_salary<<endl;
   }
 };
+#endif
